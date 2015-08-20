@@ -114,9 +114,11 @@ add_action( 'widgets_init', 'amtweddings_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amtweddings_scripts() {
+	wp_enqueue_style( 'amtweddings-style-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(),'3.3.5', 'all');
+
 	wp_enqueue_style( 'amtweddings-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'amtweddings-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'amtweddings-js-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.5', true );
 
 	wp_enqueue_script( 'amtweddings-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
