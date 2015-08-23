@@ -35,7 +35,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
+/*--------------------------------------------------------------*/
+
+#primary, #secondary {
+word-break: break-all;
+word-break: break-word;
+-moz-hyphens: auto;
+-ms-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
+}
 
 /*--------------------------------------------------------------
 # Alignments
