@@ -20,15 +20,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'amtweddings' ); ?></h2>
-		<div class="nav-links">
+		<h2 class="sr-only screen-reader-text"><?php esc_html_e( 'Posts navigation', 'amtweddings' ); ?></h2>
+		<div class="pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', 'amtweddings' ) ); ?></div>
+			<div class="previous"><?php next_posts_link( esc_html__( 'Older posts', 'amtweddings' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'amtweddings' ) ); ?></div>
+			<div class="next"><?php previous_posts_link( esc_html__( 'Newer posts', 'amtweddings' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,13 +53,14 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'amtweddings' ); ?></h2>
+		<h2 class="sr-only screen-reader-text"><?php esc_html_e( 'Post navigation', 'amtweddings' ); ?></h2>
 		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
-			?>
-		</div><!-- .nav-links -->
+			<ul class="pager">
+				<?php
+					previous_post_link( '<li class="previous">%link</li>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'amtweddings' ) );
+					next_post_link(     '<li class="next">%link</li>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'amtweddings' ) );
+				?>
+			</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }

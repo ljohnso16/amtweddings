@@ -43,8 +43,10 @@ function amtweddings_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'amtweddings' ),
+register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'amtweddings' ),
+        'secondary' => __( 'Secondary Menu', 'amtweddings' ),
+        'footer-menu' => __( 'Footer Explore Menu', 'amtweddings' ),
 	) );
 
 	/*
@@ -53,8 +55,8 @@ function amtweddings_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form',
-		'comment-form',
-		'comment-list',
+		//'comment-form',
+		//'comment-list',
 		'gallery',
 		'caption',
 	) );
@@ -63,19 +65,19 @@ function amtweddings_setup() {
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside',
+	// 	'image',
+	// 	'video',
+	// 	'quote',
+	// 	'link',
+	// ) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'amtweddings_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'amtweddings_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif; // amtweddings_setup
 add_action( 'after_setup_theme', 'amtweddings_setup' );
@@ -106,6 +108,24 @@ function amtweddings_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Sidebar Left', 'amtweddings' ),
+		'id'            => 'footer-sidebar-left',
+		'description'   => '',
+		'before_widget' => '<div class="widget-area col-md-6 col-lg-6">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Sidebar Right', 'amtweddings' ),
+		'id'            => 'footer-sidebar-right',
+		'description'   => '',
+		'before_widget' => '<div class="widget-area col-md-6 col-lg-6">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
 	) );
 }
 add_action( 'widgets_init', 'amtweddings_widgets_init' );
