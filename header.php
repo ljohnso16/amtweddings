@@ -10,7 +10,6 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,19 +21,16 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
-	<nav role="navigation primary">
-		<div class="navbar navbar-static-top navbar-default">
-			<div class="container">
+	<header id="masthead" class="site-header">
+	<nav id="primary-menu">
+		<div class="primenav navbar navbar-static-top navbar-default navbar-fixed-top">
 				<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<button type="button" class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>
 				</div>
 
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -44,7 +40,7 @@
 						'theme_location' => 'primary',
 						'depth'      => 2,
 						'container'  => false,
-						'menu_class'     => 'nav navbar-nav navbar-right',
+						'menu_class'     => 'nav navbar-nav navbar-left',
 						'walker'     => new Bootstrap_Walker_Nav_Menu()
 						);
 
@@ -53,36 +49,35 @@
 					}
 
 					?>
-
+<div class="pull-right" id="call-phonenumber">
+	call 800-999-2599
+</div>
 				</div>
-			</div>
 		</div>
 	</nav>
+<div class="sol-container" >
+	<div class="sol-header-overlay text-center">
+						<div id="header-overlay-text" class="text-center ">Honeymoons</div>
+					<div class="header-phone"><hr class="header-phone-bars"/>800.999.2599<hr class="header-phone-bars"/></div>
+					<div class="text-center header-social-icons"><a href="https://www.facebook.com/Travelinsiders"><span class="icon-facebook2"></span></a><span class="icon-twitter2"></span><span class=" icon-google-plus2"></span></div>
+				<div class="text-center"><img src="<?php echo get_template_directory_uri();?>/img/AMT-AmexLogo-min.png" alt="Header Logo" class="header-logo"></div>
+	</div>
+	<?php	echo do_shortcode('[soliloquy slug="home"]');?>
+</div>
 
-		<?php echo do_shortcode("[jssorslider id=1]"); ?>
-
-	<nav role="navigation secondary">
-		<div class="navbar navbar-static-top navbar-default">
-			<div class="container">
+	<nav>
+		<div class="secondary-navbar navbar navbar-static-top navbar-default">
 				<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+				<div class="navbar-header"></div>
 
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a>
-				</div>
-
-				<div class="navbar-collapse collapse navbar-responsive-collapse">
+				<div class="seconnd-nav navbar-collapse collapse navbar-responsive-collapse">
 					<?php
 
 					$args = array(
 						'theme_location' => 'secondary',
 						'depth'      => 2,
 						'container'  => false,
-						'menu_class'     => 'nav navbar-nav navbar-right',
+						'menu_class'     => 'nav navbar-nav navbar-center',
 						'walker'     => new Bootstrap_Walker_Nav_Menu()
 						);
 
@@ -93,11 +88,7 @@
 					?>
 
 				</div>
-			</div>
 		</div>
 	</nav>
 	</header><!-- #masthead -->
-	<div id="content" class="site-content">
-	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

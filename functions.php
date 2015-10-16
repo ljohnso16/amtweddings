@@ -27,6 +27,11 @@ function amtweddings_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	add_theme_support( 'post-thumbnails' );
+	// set_post_thumbnail_size( 350, 350);
+	add_image_size('small-thumb','250','250',true);
+	add_image_size('medium-cropped','320','300',array('center','top'));
+	add_image_size('large-cropped','640','480',true);
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -104,16 +109,16 @@ function amtweddings_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'amtweddings' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar Left', 'amtweddings' ),
-		'id'            => 'footer-sidebar-left',
+		'id'            => 'footer-left',
 		'description'   => '',
-		'before_widget' => '<div class="widget-area col-md-6 col-lg-6">',
+		'before_widget' => '<div id="help-text">',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
@@ -122,8 +127,17 @@ function amtweddings_widgets_init() {
 		'name'          => __( 'Footer Sidebar Right', 'amtweddings' ),
 		'id'            => 'footer-sidebar-right',
 		'description'   => '',
-		'before_widget' => '<div class="widget-area col-md-6 col-lg-6">',
-		'after_widget'  => '</div>',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Home Page', 'amtweddings' ),
+		'id'                => 'home-sidebar-area',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
@@ -135,16 +149,27 @@ add_action( 'widgets_init', 'amtweddings_widgets_init' );
  */
 function amtweddings_scripts() {
 	wp_enqueue_style( 'amtweddings-style-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(),'3.3.5', 'all');
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
+	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
 	wp_enqueue_style( 'amtweddings-style', get_stylesheet_uri() );
+
+
 	wp_enqueue_script( 'amtweddings-js-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
+wp_enqueue_script( 'amtweddings-js-bigtext', get_template_directory_uri() . '/js/jquery.fittext.js', array('jquery'), '1.2', true );
+wp_enqueue_script( 'amtweddings-js-bigtext', get_template_directory_uri() . '/js/bigtext.js', array('jquery'), '1.2', true );
 	wp_enqueue_script( 'amtweddings-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	// wp_enqueue_script( 'amtweddings-js-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array('jquery'), '1.8', true );
+wp_enqueue_script( 'amtweddings-js-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+		//wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'amtweddings_scripts' );
+function remove_img_attr ($html) {
+    return preg_replace('/(alt|width|height)="\d+"\s/', "", $html);
+}
+
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 /**
  * Add Respond.js for IE
  */
@@ -187,3 +212,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Bootstrap Menu.
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
+/**
+ * Load widgets
+ */
+require get_template_directory() . '/inc/registry-widget.php';
