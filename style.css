@@ -573,11 +573,11 @@ white-space: nowrap;
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav .open .dropdown-menu>li>a:visited,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav>li>a:visited,.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a,.primenav.navbar-default .navbar-nav>li>a,.primenav,
 .primenav.navbar.navbar-static-top.navbar-default .container,
 .primenav.navbar.navbar-static-top.navbar-default .container a:visited,
-.primenav.navbar.navbar-static-top.navbar-default .container a,.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-background-color: #142E69;
-color:#ffffff;
-font-weight: bold;
-text-transform: uppercase;
+.primenav.navbar.navbar-static-top.navbar-default .container a,.navbar-default .navbar-collapse, .navbar-default .navbar-form,ul#menu-main-navigation li,ul.dropdown-menu{
+background-color: #142E69 !important;
+color:#ffffff !important;
+font-weight: bold !important;
+text-transform: uppercase !important;
 }
 .secondary-navbar.navbar.navbar-static-top.navbar-default,.secondary-navbar.navbar.navbar-static-top.navbar-default a,.secondary-navbar.navbar.navbar-static-top.navbar-default a:visited,.seconnd-nav.navbar-collapse.collapse.navbar-responsive-collapse{
 background-color: #000000;
@@ -701,18 +701,6 @@ position: relative;
     opacity: 0.70;
 		color:#ffffff;
 		text-transform: uppercase;
-}
-
-.couple-text a{
-
-
-}
-.reg-thumb:hover{
-    /*opacity: 0.4;
-    filter: alpha(opacity=40);*/
-}
-.reg-thumb-container:hover{
-/*background-color: #1867A0;*/
 }
 .solid-text{
 color:#FFFFFF;
