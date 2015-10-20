@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-		<div id="secondary" class="borderbox widget-area col-md-3 col-lg-3" role="complementary">
+		<div id="secondary" class="center-block borderbox widget-area col-xs-12 col-sm-12 col-md-3 col-lg-3" role="complementary">
 		<div id="box">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 			</div><!-- .well -->

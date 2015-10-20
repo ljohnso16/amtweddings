@@ -58,8 +58,8 @@
 <div class="sol-container" >
 	<div class="sol-header-overlay text-center">
 						<div id="header-overlay-text" class="text-center ">Honeymoons</div>
-					<div class="header-phone"><hr class="header-phone-bars"/>800.999.2599<hr class="header-phone-bars"/></div>
-					<div class="text-center header-social-icons"><a href="https://www.facebook.com/Travelinsiders"><span class="icon-facebook2"></span></a><span class="icon-twitter2"></span><span class=" icon-google-plus2"></span></div>
+					<div class="header-phone"><hr class="header-phone-bars"/><div style="display:inline">800.999.2599</div><hr class="header-phone-bars"/></div>
+					<div class="text-center header-social-icons"><a href="https://www.facebook.com/Travelinsiders"><span class="icon-facebook2"></span></a><a href="https://twitter.com/AMT_Travel"><span class="icon-twitter2"></span></a><span class=" icon-google-plus2"></span></div>
 				<div class="text-center"><img src="<?php echo get_template_directory_uri();?>/img/AMT-AmexLogo-min.png" alt="Header Logo" class="header-logo"></div>
 	</div>
 	<?php	echo do_shortcode('[soliloquy slug="home"]');?>

@@ -34,7 +34,11 @@ get_header(); ?>
 		<div class="hero-text col-sm-12 col-md-12 col-lg-12 text-center ">
 <span class="icon-bubbles4 circled-icon"></span>
 <div class="hero-title">Real People, Real Solutions</div><div class="hero-words">We'll do all the ressearch and find the best palce within your budget that meets all of your travel needs. If you do know where you and your fugure spouse would like to honemoon, get an isntant quote on our online booking engine.</div></div>
-<div class="honeymooners-hero-text col-sm-12 col-md-12 col-lg-12 text-center "><h2 class="honeymooners-hero-title">Honeymoon Registry</h2><hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars"><div class="honeymooners-hero-words">Find the happy couple below and be sure to make their dream honeymoon come true. If you would like to be one of the happy coules in the registry , call us at 800-999-2599.</div></div>
+<div class="honeymooners-hero-text col-sm-12 col-md-12 col-lg-12 text-center ">
+	<h2 class="honeymooners-hero-title">Honeymoon Registry</h2>
+	<hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars">
+	<div class="honeymooners-hero-words">Find the happy couple below and be sure to make their dream honeymoon come true. If you would like to be one of the happy coules in the registry , call us at 800-999-2599.</div></div>
+<div style="clear:both"></div>
 <?php dynamic_sidebar('home-sidebar-area');?>
 </div>
 <?php get_footer(); ?>

@@ -361,6 +361,38 @@ Media Queries
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	#call-phonenumber{display: none;}
+	.hero-title{
+		font-size:1.5em;
+	font-weight: bold;
+	color: #FFF;
+	}
+	.hero-text{
+  position: relative;
+    top: -244px;
+}
+	.entry-title,.honeymooners-hero-title, .home .page-title{
+	font-size: 1.4em;
+}
+	.hero-words{
+	font-size: 1em;
+	color: #D3D4D8;
+	}
+	.header-social-icons{
+	font-size: 1.8em;
+    /*padding-bottom: 190px;*/
+	}
+	.sol-container {
+    padding-top: 51px;
+}
+	.sol-header-overlay {
+	    position: absolute;
+	    z-index: 10;
+	    top: 10%;
+	    left: 0%;
+	}
+
+
 	.secondary-navbar.navbar.navbar-static-top.navbar-default{display:none;}
 		div#home-heroes-a
 		{
@@ -380,7 +412,7 @@ Media Queries
 
 		div.fixed-bg
 		{
-			height: 185px;
+			height: 250px;
 			background-color: #142E69;
 			background-blend-mode: multiply;
 			background-size: cover;
@@ -391,12 +423,71 @@ Media Queries
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+
+	.sol-container {
+    padding-top: 19px;
+}
+
+.header-social-icons{
+font-size: 3em;
+padding-bottom: 45px;
+}
+
+	.hero-title{
+		font-size:1.5em;
+	font-weight: bold;
+	color: #FFF;
+	}
+
+	.hero-text{
+  position: relative;
+    top: -200px;
+}
+		.entry-title,.honeymooners-hero-title, .home .page-title{
+		font-size: 1.4em;
+	}
 	.secondary-navbar.navbar.navbar-static-top.navbar-default{display:none;}
+	.hero-words{
+	font-size: 1.7em;
+	color: #D3D4D8;
+	}
+		.sol-header-overlay {
+		    position: absolute;
+		    z-index: 10;
+		    top: 05%;
+		    left: 0%;
+		}
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.sol-container {
+    padding-top: 0px;
+}
+.header-social-icons{
+font-size: 3em;
+padding-bottom: 100px;
+}
+	.hero-title{
+		font-size:2em;
+	font-weight: bold;
+	color: #FFF;
+	}
+
+.hero-text{
+position: relative;
+	top: -200px;
+}
+		.entry-title, .honeymooners-hero-title, .home .page-title{
+		font-size: 1.4em;
+	}
+	.sol-header-overlay {
+	    position: absolute;
+	    z-index: 10;
+	    top: 05%;
+	    left: 0%;
+	}
 	.secondary-navbar.navbar.navbar-static-top.navbar-default{display:block;}
 		div#home-heroes-a
 		{
@@ -422,13 +513,47 @@ Media Queries
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+	.hero-words{
+	font-size: 1.7em;
+	color: #D3D4D8;
+	}
 
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.sol-container {
+    padding-top: 51px;
+}
+.header-social-icons{
+font-size: 3em;
+padding-bottom: 100px;
+}
+	.hero-title{
+		font-size:3em;
+	font-weight: bold;
+	color: #FFF;
+	}
+
+.hero-text{
+position: relative;
+	top: -200px;
+}
+		.entry-title,.honeymooners-hero-title, .home .page-title{
+		font-size: 1.4em;
+	}
+		.sol-header-overlay {
+		    position: absolute;
+		    z-index: 10;
+		    top: 05%;
+		    left: 0%;
+		}
 	.secondary-navbar.navbar.navbar-static-top.navbar-default{display:block;}
 	.copyright {float: right;}
+	.hero-words{
+	font-size: 1.7em;
+	color: #D3D4D8;
+	}
 
 
 
@@ -437,6 +562,34 @@ Media Queries
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+.sol-container {
+    padding:0px;
+}
+	.hero-title{
+		font-size:3em;
+	font-weight: bold;
+	color: #FFF;
+	}
+
+	.hero-text{
+  position: relative;
+    top: -200px;
+}
+
+	.sol-header-overlay {
+	    position: absolute;
+	    z-index: 10;
+	    top: 05%;
+	    left: 0%;
+	}
+	.hero-words{
+	font-size: 1.7em;
+	color: #D3D4D8;
+	}
+.header-social-icons{
+font-size: 3em;
+padding-bottom: 152px;
+}
 		div#home-heroes-a
 		{
 			background-image: url('img/homepage-hero-a.jpg');
@@ -478,9 +631,9 @@ text-transform: uppercase;
 color:#FFF;
 }
 #site-footer .copy-text a,#site-footer .copy-text a:visited,#site-footer .copy-text a:active,#site-footer .copy-text a:hover{
-color:#000;
+color:#FFF;
 }
-.honeymooners-hero-title,.home .page-title{
+.entry-title,.honeymooners-hero-title,.home .page-title{
 	color:#1A6EAC;
 font-family: verdana;
 font-weight:bolder;
@@ -602,19 +755,8 @@ text-transform: uppercase;
     width: 100%;
 padding:0px;
 }
-	.hero-text{
-  position: relative;
-    top: -200px;
-}
-.hero-title{
-	font-size:3em;
-font-weight: bold;
-color: #FFF;
-}
-.hero-words{
-font-size: 1.7em;
-color: #D3D4D8;
-}
+
+
 div.honeymooners-hero-text{
 color:#000;
 }
@@ -645,21 +787,12 @@ color:#000;
 margin-top: 0px;
 }
 .moonray-form-element-wrapper.moonray-form-element-wrapper-contracted.moonray-form-element-wrapper-alignment-left.moonray-form-input-type-email{padding:0px;}
-.sol-header-overlay {
-    position: absolute;
-    z-index: 10;
-    top: 05%;
-    left: 0%;
-}
 .sol-header-overlay{
 color:#FFF;
 text-transform:uppercase;
 width:100%;
 }
-.header-social-icons{
-font-size: 3em;
-padding-bottom: 200px;
-}
+
 .header-social-icons span,.header-social-icons a,.header-social-icons a:visited,.header-social-icons a:hover{
 color:#FFFFFF;
 text-decoration: none;
@@ -704,4 +837,21 @@ position: relative;
 }
 .solid-text{
 color:#FFFFFF;
+}
+.registry-widget-thumbnail{
+height: 300px;
+background-repeat: no-repeat;
+}
+.caption.registry-overlay {
+    position: absolute;
+    top: 0xp;
+    height: 100%;
+    width: 100%;
+    background-color: #1867A0;
+    opacity: 0.70;
+    padding-top: 100px;
+}
+.registry-row{
+
+padding-bottom:10px;
 }

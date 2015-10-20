@@ -10,8 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header text-center">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars">
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -28,4 +29,3 @@
 		<?php edit_post_link( esc_html__( 'Edit', 'amtweddings' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
