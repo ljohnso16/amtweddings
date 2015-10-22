@@ -137,7 +137,16 @@ function amtweddings_widgets_init() {
 		'id'                => 'home-sidebar-area',
 		'description'   => '',
 		'before_widget' => '',
-		'after_widget'  => '',
+		'after_widget'  => '<div style="clear:both"></div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Home Page Mobile', 'amtweddings' ),
+		'id'                => 'home-sidebar-area-mobile',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '<div style="clear:both"></div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
@@ -216,3 +225,8 @@ require get_template_directory() . '/inc/bootstrap-walker.php';
  * Load widgets
  */
 require get_template_directory() . '/inc/registry-widget.php';
+
+/**
+ * Load widgets
+ */
+require get_template_directory() . '/inc/mobile-registry-widget.php';

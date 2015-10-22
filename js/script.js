@@ -6,7 +6,6 @@ $('.header-phone-bars').fitText();
 //hover for registry widget, move this to the plugin when you can.
 $('.reg-widg').hover(
 		function(){
-console.log("helloworld");
       $( this ).find( ".caption " ).fadeIn(300);
 		},
 		function(){
