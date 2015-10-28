@@ -30,7 +30,8 @@ function amtweddings_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// set_post_thumbnail_size( 350, 350);
 	add_image_size('small-thumb','250','250',true);
-	add_image_size('medium-cropped','320','300',array('center','top'));
+	add_image_size('medium-cropped','400','300',array('center','top'));
+	add_image_size('medium','400','300',false);
 	add_image_size('large-cropped','640','480',true);
 	/*
 	 * Let WordPress manage the document title.

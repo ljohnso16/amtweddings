@@ -17,14 +17,14 @@ get_header(); ?>
 	<div id="primary" class="col-md-12 col-lg-12 text-center">
 		<main id="main" class="site-main">
 				<header>
-					<h2 class="home page-title screen-reader-text">Welcome to AMT American Express Weddings Division</h2><hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars">
+					<h2 class="home page-title screen-reader-text">Welcome to AMT American Express Weddings Division</h2><div class=" icon-line"><hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars"></div>
 				</header>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<div id="home-sidebar-area">
-<div class="col-sm-12 col-md-12 col-lg-12">
-			<div id="home-heroes-a" class="text-center fixed-bg"></div>
-			<div class="hero-text"><span class="icon-map circled-icon"></span><div class="hero-title">Worry Free</div><div class="hero-words">According to Samuel Johnson, honeymoons are a time "when there is nothing but tenderness and pleasure." But in today’s fast track world, a groom or bride to be finds themselves overwhelmed with the many other wedding arrangements. That's where AMT American Express Travel comes in.</div></div>
+<div>
+			<div id="home-heroes-a" class="text-center fixed-bg col-sm-12 col-md-12 col-lg-12"></div>
+			<div class="hero-text col-sm-12 col-md-12 col-lg-12"><span class="icon-map circled-icon"></span><div class="hero-title">Worry Free</div><div class="hero-words">According to Samuel Johnson, honeymoons are a time "when there is nothing but tenderness and pleasure." But in today’s fast track world, a groom or bride to be finds themselves overwhelmed with the many other wedding arrangements. That's where AMT American Express Travel comes in.</div></div>
 
 </div>
 
@@ -37,8 +37,7 @@ get_header(); ?>
 	<div id="home-heroes-c" class="fixed-bg col-sm-12 col-md-12 col-lg-12"></div>
 	<div class="hero-text col-sm-12 col-md-12 col-lg-12 text-center "><span class="icon-bubbles4 circled-icon"></span><div class="hero-title">Real People, Real Solutions</div><div class="hero-words">We'll do all the ressearch and find the best palce within your budget that meets all of your travel needs. If you do know where you and your fugure spouse would like to honemoon, get an isntant quote on our online booking engine.</div></div>
 </div>
-
-<div class="honeymooners-hero-text col-sm-12 col-md-12 col-lg-12 text-center "><h2 class="honeymooners-hero-title">Honeymoon Registry</h2><hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars"><div class="honeymooners-hero-words">Find the happy couple below and be sure to make their dream honeymoon come true. If you would like to be one of the happy coules in the registry , call us at 800-999-2599.</div></div>
+<div class="honeymooners-hero-text col-sm-12 col-md-12 col-lg-12 text-center "><h2 class="honeymooners-hero-title"><a href="./registry" title="Registry">Honeymoon Registry</a></h2><div class="honeymooners-hero-words">Find the happy couple below and be sure to make their dream honeymoon come true.<br> If you would like to be one of the happy couples in the registry , call us at 800-999-2599.</div><div class=" icon-line"><hr class="icon-bars"><span class="icon-heart icom"></span><hr class="icon-bars"></div></div>
 <div style="clear:both"></div>
 <?php dynamic_sidebar('home-sidebar-area');?>
 <?php dynamic_sidebar('home-sidebar-area-mobile');?>

@@ -31,7 +31,7 @@ class mobile_wedding_registry_widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
   public function widget( $args, $instance ) {
-    $recent_posts = wp_get_recent_posts(array(  'numberposts' => 8,'post_type'=>'wedding_registry', 'orderby' => 'post_date', 'post_status' => 'publish'));
+    $recent_posts = wp_get_recent_posts(array(  'numberposts' => 9,'post_type'=>'wedding_registry', 'orderby' => 'post_date', 'post_status' => 'publish'));
 		$i = 0;
 echo '
 									<div class=" registry-row-mobile">
@@ -45,20 +45,22 @@ echo '
 			if($i==1)
 			{
 					echo  '
-								      <div class="item active reg-slide">
-												'.get_the_post_thumbnail($recent['ID'],'medium-cropped',array('class'=>'img-responsive')).'
-													<div class="mobile-caption text-center">
-														<p class="solid-text">'.$spouse_a.'<br/> & <br/>'.$spouse_b.'</p>
-													</div>
+								      <div class="item active reg-slide center-block text-center">
+											<a href="'.get_permalink( $recent['ID']).'" title="'.$spouse_a.' & '.$spouse_b.'">
+												'.get_the_post_thumbnail($recent['ID'],'medium',array('class'=>'center-block text-center')).'
+													<div class="mobile-caption text-center"></div>
+													<p class="solid-text">'.$spouse_a.'<br/> & <br/>'.$spouse_b.'</p>
+												</a>
 								      </div>';
 			}
 			else{
 					echo '
 			      <div class="item text-center center-block reg-slide">
+							<a href="'.get_permalink( $recent['ID']).'" title="'.$spouse_a.' & '.$spouse_b.'">
 							<div>'.get_the_post_thumbnail($recent['ID'],'medium-cropped').'</div>
-								<div class="mobile-caption text-center">
-									<p class="solid-text">'.$spouse_a.'<br/> & <br/>'.$spouse_b.'</p>
-								</div>
+								<div class="mobile-caption text-center"></div>
+								<p class="solid-text">'.$spouse_a.'<br/> & <br/>'.$spouse_b.'</p>
+							</a>
 			      </div>';
 					}
 
