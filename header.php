@@ -61,8 +61,44 @@
 					<div class="header-phone"><hr class="header-phone-bars"/><div class="phone-text">800.999.2599</div><hr class="header-phone-bars"/></div>
 					<div class="text-center header-social-icons"><a href="https://www.facebook.com/Travelinsiders"><span class="icon-facebook2"></span></a><a href="https://twitter.com/AMT_Travel"><span class="icon-twitter2"></span></a><span class=" icon-google-plus2"></span></div>
 				<div class="amex-header-logo text-center"><img src="<?php echo get_template_directory_uri();?>/img/AMT-AmexLogo-min.png" alt="Header Logo" class="header-logo"></div>
-	</div>
-	<?php	echo do_shortcode('[soliloquy slug="home"]');?>
+</div>
+<div id="topslider" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+		<img src="<?php echo get_template_directory_uri();?>/img/heroslide1-min-min.jpg">
+    </div>
+
+    <div class="item">
+		<img src="<?php echo get_template_directory_uri();?>/img/heroslide2-min-min.jpg">
+    </div>
+
+    <div class="item">
+		<img src="<?php echo get_template_directory_uri();?>/img/heroslide3-min-min.jpg">
+    </div>
+
+    <div class="item">
+		<img src="<?php echo get_template_directory_uri();?>/img/heroslide4-min-min.jpg">
+    </div>
+    <div class="item">
+		<img src="<?php echo get_template_directory_uri();?>/img/heroslide5-min-min.jpg">
+    </div>	
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#topslider" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#topslider" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  
+  
+
+
+
 </div>
 
 	<nav>

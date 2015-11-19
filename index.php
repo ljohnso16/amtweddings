@@ -42,6 +42,6 @@ get_header(); ?>
 <?php dynamic_sidebar('home-sidebar-area');?>
 <?php dynamic_sidebar('home-sidebar-area-mobile');?>
 
-</div>
+</div></div>
 <div class="clearfix"></div>
 <?php get_footer(); ?>

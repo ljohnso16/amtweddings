@@ -792,6 +792,9 @@ height: 45px;
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+.carousel-inner {
+    height: 993px;
+}
 .caption.registry-overlay:last-child,.registry-row:last-child, .last-reg {
     visibility: hidden;
 }
@@ -830,7 +833,7 @@ height: 38px;
 	.sol-header-overlay {
 	    position: absolute;
 	    z-index: 10;
-    margin-top: 14%;
+    margin-top: 10%;
     margin-left: 16.5%;
 	}
 .honeymooners-hero-words {font-size: 1.5em;}
@@ -893,12 +896,15 @@ margin:20px 0px;
 text-transform: uppercase;
 		margin-bottom: 0px;
     padding-bottom: 0px;
+	padding-top: 20px;
 }
 
-.entry-title,.honeymooners-hero-title, .home .page-title{
+.entry-title,.honeymooners-hero-title, .page-title{
 		margin: 0px;
     padding: 0px;
 	padding-bottom: 2px;
+	
+	
 }
 
 .icon-bars {
@@ -988,7 +994,7 @@ font-weight: bold !important;
 text-transform: uppercase !important;
 }
 .secondary-navbar.navbar.navbar-static-top.navbar-default,.secondary-navbar.navbar.navbar-static-top.navbar-default a,.secondary-navbar.navbar.navbar-static-top.navbar-default a:visited,.seconnd-nav.navbar-collapse.collapse.navbar-responsive-collapse{
-background-color: #000000;
+background-color: #000000 !important;
 color: #ffffff;
 font-weight: bold;
 text-transform: uppercase;
@@ -1146,7 +1152,17 @@ border-bottom: 5px solid #000;
 width:100%;
 padding: 0px;
 }
-.carousel-control{
+.icon-line{
+	
+}
+#topslider .carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 993px; /*slider height*/
+}
+#topslider .carousel .item img {
+    width: 100%; /*img width*/
+}
+#topslider .carousel-control{
 z-index: 999;
 }
 div.mobile-caption p.solid-text{
